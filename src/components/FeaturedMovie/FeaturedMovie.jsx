@@ -23,15 +23,8 @@ const FeaturedMovie = ({ movie }) => {
 						</Typography>
 						<Typography variant="body2">{movie?.overview}</Typography>
 					</StyledCardContent>
-					{/* <CardContent className={classes.CardContent} classes={classes.CardContentRoot}>
-					<Typography variant="h5" gutterBottom>
-						{movie?.title}
-					</Typography>
-					<Typography variant="body2">{movie?.overview}</Typography>
-				</CardContent> */}
 				</Box>
 			</StyledCard>
-			{/* <Box padding="20px"> */}
 		</StyledBoxFeaturedCardContainer>
 	);
 };
