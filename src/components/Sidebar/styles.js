@@ -19,7 +19,7 @@ const StyledLinks = styled(Link)(({ theme }) => ({
 
 const StyledGenreImage = styled('img')(({ theme }) => ({
 	// Change it afterwords
-	filter: theme.palette.mode === 'light' ? 'dark' : 'invert(1)',
+	filter: theme.palette.mode === 'dark' && 'invert(1)',
 }));
 
 export default StyledComponents;

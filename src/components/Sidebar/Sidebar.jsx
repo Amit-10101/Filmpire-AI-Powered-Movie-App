@@ -32,9 +32,13 @@ const categories = [
 const Sidebar = ({ setMobileOpen }) => {
 	const theme = useTheme();
 	const { data, isFetching } = useGetGenresQuery();
+	const { genreIdOrCategoryName } = useSelector((state) => state.currentGenreOrCategory);
 
 	const dispatch = useDispatch();
-	// const action = selectGenreOrCategory();
+
+	useEffect(() => {
+		setMobileOpen(false);
+	}, [genreIdOrCategoryName]);
 
 	return (
 		<>
@@ -52,11 +56,7 @@ const Sidebar = ({ setMobileOpen }) => {
 					<StyledLinks key={value} className={{}} to="/">
 						<ListItemButton onClick={() => dispatch(selectGenreOrCategory(value))}>
 							<ListItemIcon>
-								<StyledGenreImage
-									src={genreIcons[label.toLowerCase()]}
-									className={{}}
-									height={30}
-								/>
+								<StyledGenreImage src={genreIcons[label.toLowerCase()]} height={30} />
 							</ListItemIcon>
 							<ListItemText primary={label} />
 						</ListItemButton>
@@ -73,11 +73,7 @@ const Sidebar = ({ setMobileOpen }) => {
 						<StyledLinks key={id} className={{}} to="/">
 							<ListItemButton onClick={() => dispatch(selectGenreOrCategory(id))}>
 								<ListItemIcon>
-									<StyledGenreImage
-										src={genreIcons[name.toLowerCase()]}
-										className={{}}
-										height={30}
-									/>
+									<StyledGenreImage src={genreIcons[name.toLowerCase()]} height={30} />
 								</ListItemIcon>
 								<ListItemText primary={name} />
 							</ListItemButton>

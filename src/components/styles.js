@@ -1,51 +1,22 @@
-// import { styled } from '@mui/system';
+import { styled } from '@mui/system';
 
-// const useStyles = styled(() => ({
-// 	root: {
-// 		display: 'flex',
-// 		height: '100%',
-// 	},
-// 	content: {
-// 		flexGrow: '1',
-// 		padding: '1em',
-// 	},
-// 	toolbar: {
-// 		height: '70px',
-// 	},
-// }));
+const StyledDivRoot = styled('div')(() => ({
+	display: 'flex',
+	height: '100%',
+}));
 
-// export default useStyles;
-
-// import { styled } from '@mui/system';
-
-// const StyledComponents = {
-// 	root: styled('div')({
-// 		display: 'flex',
-// 		height: '100%',
-// 	}),
-// 	content: styled('div')({
-// 		flexGrow: '1',
-// 		padding: '1em',
-// 	}),
-// 	toolbar: styled('div')({
-// 		height: '70px',
-// 	}),
-// };
-
-// export default StyledComponents;
-
-const StyledComponents = {
-	root: {
-		display: 'flex',
-		height: '100%',
+const StyledMainContent = styled('main')(({ theme }) => ({
+	marginLeft: '270px',
+	width: '100%',
+	flexGrow: '1',
+	padding: '2em 1em',
+	[theme.breakpoints.down('sm')]: {
+		marginLeft: '0',
 	},
-	content: {
-		flexGrow: '1',
-		padding: '1em',
-	},
-	toolbar: {
-		height: '70px',
-	},
-};
+}));
 
-export default StyledComponents;
+const StyledDivToolbar = styled('div')(() => ({
+	height: '70px',
+}));
+
+export { StyledDivRoot, StyledMainContent, StyledDivToolbar };

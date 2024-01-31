@@ -7,7 +7,7 @@ import { StyledLink, StyledImage } from './styles';
 const Movie = ({ movie, index }) => (
 	// console.log(movie, index);
 
-	<Grid item xs={12} sm={6} md={4} lg={3} xl={2} sx={{ padding: '10px' }}>
+	<Grid item xs={12} sm={6} md={4} lg={3} xl={2} sx={{ padding: '10px', margin: '0' }}>
 		<Grow in key={index} timeout={(index + 1) * 250}>
 			<StyledLink to={`/movie/${movie.id}`}>
 				<StyledImage
@@ -17,6 +17,12 @@ const Movie = ({ movie, index }) => (
 							? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
 							: 'https://www.fillmurray.com/200/300'
 					}
+					sx={{
+						':hover': {
+							boxShadow: (theme) =>
+								`0em 0em 1em ${theme.palette.mode === 'light' ? '#707070' : '#bcbaba'}`,
+						},
+					}}
 				/>
 				<Typography
 					variant="h5"
@@ -25,7 +31,7 @@ const Movie = ({ movie, index }) => (
 						whiteSpace: 'nowrap',
 						overflow: 'hidden',
 						textOverflow: 'ellipsis',
-						width: '230px',
+						width: '200px',
 						marginTop: '10px',
 						marginBottom: '0',
 						// marginLeft: '240px',

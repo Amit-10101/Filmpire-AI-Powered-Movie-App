@@ -4,13 +4,16 @@ import React from 'react';
 import { StyledGrid } from './styles';
 import Movie from '../Movie/Movie';
 
-const MovieList = ({ movies }) => (
-	// console.log(movies);
+const MovieList = ({ movies, numberOfMovies, excludeFirst }) => {
+	const startFrom = excludeFirst ? 1 : 0;
 
-	<StyledGrid container>
-		{movies.results.map((movie, index) => (
-			<Movie key={index} movie={movie} index={index} />
-		))}
-	</StyledGrid>
-);
+	return (
+		<StyledGrid container>
+			{movies.results.slice(startFrom, numberOfMovies).map((movie, index) => (
+				<Movie key={index} movie={movie} index={index} />
+			))}
+		</StyledGrid>
+	);
+};
+
 export default MovieList;

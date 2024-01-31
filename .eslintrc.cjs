@@ -25,6 +25,8 @@ module.exports = {
 		indent: ['error', 'tab', { SwitchCase: 1 }],
 		'react/jsx-indent': ['error', 'tab'],
 		'react/jsx-indent-props': ['error', 'tab'],
+		'implicit-arrow-linebreak': 'off',
+		camelcase: 'off',
 		// JSM
 		'react/react-in-jsx-scope': 0,
 		'import/extensions': 0,

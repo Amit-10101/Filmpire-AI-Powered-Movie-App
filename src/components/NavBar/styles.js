@@ -10,6 +10,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 	marginLeft: '240px',
 	[theme.breakpoints.down('sm')]: {
 		marginLeft: '0',
+		flexWrap: 'wrap', // Search bar alignment problem solution
 	},
 }));
 
