@@ -37,7 +37,7 @@ RUN npm install -g serve
 # Copy build files from build stage
 COPY --from=0 /app/dist ./dist
 
-# Instruct Docker to listen on port 5000 (you can choose any port you like)
+# Instruct Docker to listen on port 5173 (you can choose any port you like)
 EXPOSE 5173
 
 # Start the application
