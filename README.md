@@ -10,6 +10,7 @@ The application is live and hosted on Azure using Docker image. You can access i
 
 -   Application Home Page Screenshot - Light Mode
     ![Application Home Page Screenshot - Light Mode](.//src//assets/ScreenShots/SS_light.png)
+
 -   Application Home Page Screenshot - Dark Mode
     ![Application Home Page Screenshot - Dark Mode](.//src//assets/ScreenShots/SS_dark.png)
 
