@@ -4,7 +4,8 @@ Filmpire is a React application developed out of my passion for Web Development.
 
 ## 🌐 Live Website
 
-The application is live and hosted on Azure using Docker image. You can access it [here](https://filmpire.azurewebsites.net/).
+-   The application is live and hosted on Azure using Docker image. You can access it [here](https://filmpire.azurewebsites.net/).
+-   Secondary Hosting on netlify. You can access it [here](https://filmpire-ak.netlify.com/).
 
 ## 📸 Screenshot
 
